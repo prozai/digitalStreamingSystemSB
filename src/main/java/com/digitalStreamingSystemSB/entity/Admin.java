@@ -22,6 +22,8 @@ public class Admin {
     private int admin_id;
     @Column(name="NAME", nullable = false)
     private String name;
+    @Column(name="PHONE", nullable = false)
+    private String phone;
     @Column(name="USERNAME", nullable = false)
     private String username;
     @Column(name="PASSWORD", nullable = false)
@@ -29,9 +31,10 @@ public class Admin {
     @Column(name="EMAIL", nullable = false)
     private String email;
 
-    public Admin(int admin_id, String name, String username, String password, String email) {
+    public Admin(int admin_id, String name, String phone, String username, String password, String email) {
         this.admin_id = admin_id;
         this.name = name;
+        this.phone = phone;
         this.username = username;
         this.password = password;
         this.email = email;
@@ -54,6 +57,14 @@ public class Admin {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getUsername() {
@@ -79,6 +90,8 @@ public class Admin {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
 
 
 }

@@ -44,6 +44,7 @@ public class MovieControllerDb {
 //        existingMovie.setMovie_image(movie.getMovie_image());
         existingMovie.setCost(movie.getCost());
         existingMovie.setYear(movie.getYear());
+        existingMovie.setActor_id(movie.getActor_id());
         Movie savedMovie = movieRepository.save(movie);
         return savedMovie;
     }

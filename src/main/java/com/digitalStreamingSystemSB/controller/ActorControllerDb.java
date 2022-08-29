@@ -39,7 +39,7 @@ public class ActorControllerDb {
     public Actor updateActor(@PathVariable(value="id") Integer id, @RequestBody Actor actor) {
         // fetch the actor
         Actor existingActor = actorRepository.findById(id).get();
-        existingActor.setActorId(id);
+        existingActor.setActor_Id(id);
         existingActor.setFirstName(actor.getFirstName());
         existingActor.setLastName(actor.getLastName());
         existingActor.setGender(actor.getGender());

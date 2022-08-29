@@ -18,7 +18,7 @@ public class Actor {
     @GeneratedValue(strategy = GenerationType.AUTO)
 //	actorId > ACTOR_ID
     @Column(name="ACTOR_ID")
-    private int actorId;
+    private int actor_Id;
     @Column(name="FIRST_NAME", nullable = false)
     private String firstName;
     @Column(name="LAST_NAME", nullable = false)
@@ -30,20 +30,20 @@ public class Actor {
 
     public Actor() {
     }
-    public Actor(int actorId, String firstName, String lastName, String gender, int age) {
-        this.actorId = actorId;
+    public Actor(int actor_Id, String firstName, String lastName, String gender, int age) {
+        this.actor_Id = actor_Id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.age = age;
     }
 
-    public int getActorId() {
-        return actorId;
+    public int getActor_Id() {
+        return actor_Id;
     }
 
-    public void setActorId(int actorId) {
-        this.actorId = actorId;
+    public void setActor_Id(int actor_Id) {
+        this.actor_Id = actor_Id;
     }
 
     public String getFirstName() {
