@@ -27,29 +27,19 @@ public class Movie {
     private int year;
     @Column(name="ACTOR_ID", nullable = false)
     private int actor_id;
+    @Column(name="THUMBNAIL")
+    private String thumbnail;
 
-//    @Column(name="MOVIE_IMAGE", nullable = false)
-//    private byte movie_image;
+    public Movie() {
+    }
 
-    public Movie(int movie_id, String title, int cost, int year, int actor_id) {
+    public Movie(int movie_id, String title, int cost, int year, int actor_id, String thumbnail) {
         this.movie_id = movie_id;
         this.title = title;
         this.cost = cost;
         this.year = year;
-        //this.movie_image = movie_image;
         this.actor_id = actor_id;
-    }
-
-
-    public int getActor_id() {
-        return actor_id;
-    }
-
-    public void setActor_id(int actor_id) {
-        this.actor_id = actor_id;
-    }
-
-    public Movie() {
+        this.thumbnail = thumbnail;
     }
 
     public int getMovie_id() {
@@ -84,12 +74,19 @@ public class Movie {
         this.year = year;
     }
 
-//    public byte getMovie_image() {
-//        return movie_image;
-//    }
-//
-//    public void setMovie_image(byte movie_image) {
-//        this.movie_image = movie_image;
-//    }
+    public int getActor_id() {
+        return actor_id;
+    }
 
+    public void setActor_id(int actor_id) {
+        this.actor_id = actor_id;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
 }

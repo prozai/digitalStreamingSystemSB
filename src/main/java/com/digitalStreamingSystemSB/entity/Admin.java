@@ -41,6 +41,7 @@ public class Admin {
     }
 
     public Admin() {
+        super();
     }
 
     public int getAdmin_id() {
